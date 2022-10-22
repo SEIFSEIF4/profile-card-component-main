@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap");
+/* Variables */
+:root {
+	/* Primary */
+	--cyan-color: hsl(185, 75%, 39%);
+	--desaturated-color: hsl(229, 23%, 23%);
+	--grayishBlue-color: hsl(227, 10%, 46%);
+	/* Neutral */
+	--Darkgray-color: hsl(0, 0%, 59%);
+	/* Font */
+	--text-font-size: 18px; /*(name and stats)*/
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Big Shoulders Display", cursive;
+	font-family: "Kumbh Sans", sans-serif;
+	background-color: var(--PaleBlue-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: hsl(185deg, 75%, 39%);
+	background-image: url(images/bg-pattern-top.svg),
+		url(images/bg-pattern-bottom.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+}
+
+.container {
+	max-width: 17.75rem;
+	margin: 1rem;
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: white;
+}
+.container .pfp img {
+	display: block;
+	position: relative;
+	width: 5rem;
+	margin: -3rem auto 0;
+	border-radius: 50%;
+	border: 5px solid white;
+	z-index: 1;
+}
+
+.container .text {
+	text-align: center;
+}
+.container .text h1 {
+	padding: 0.625rem;
+	font-size: 18px;
+}
+
+.container .text span {
+	margin-left: 5px;
+	font-weight: 100;
+	color: var(--grayishBlue-color);
+	opacity: 0.8;
+}
+
+.container .text p {
+	padding: 0 0.625rem 0.9375rem;
+	font-size: 14px;
+	color: var(--grayishBlue-color);
+	opacity: 0.9;
+}
+
+.container .data {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	border-top: 1px solid rgba(0, 0, 0, 0.144);
+	text-align: center;
+}
+
+.container .data p {
+	padding: 1.25rem;
+	font-size: 16px;
+	color: var(--desaturated-color);
+	font-weight: bold;
+}
+.container .data span {
+	font-size: 10px;
+	font-weight: normal;
+	color: var(--grayishBlue-color);
+	margin-inline: 0.5rem;
+}
+
+@media (width>=48.0625rem) {
+	.container {
+		max-width: 23.75rem;
+	}
+	.container .text {
+		margin: 1rem 0;
+	}
+	.container .data span {
+		display: block;
+	}
+}
